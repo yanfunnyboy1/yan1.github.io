@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/@tonconnect/sdk@latest/dist/tonconnect-sdk.min.js"></script>
+    <script src="https://unpkg.com/tonweb@0.0.41/dist/tonweb.js"></script>
+  </head>
+  <body>
+    <script>
+      window.onload = async () => {
+        window.connector = new TonConnectSDK.TonConnect({
+          manifestUrl: 'tonconnect-manifest.json'
+        });
+        connector.restoreConnection();
+      }
+    </script>
+  </body>
+</html>
